@@ -4,9 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         WebDriver driver;
-        Browser browser = new Browser("Chrome");
+        Browser browser = new Browser("Firefox");
         driver = browser.getWebdriver();
+        driver.get("https://staging.engineer.ai/home");
 // tests
+        tests.registerTest(driver);
 
        driver.close();
     }
